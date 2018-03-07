@@ -35,4 +35,12 @@ You can create a chain using Chain() and ChainFunc() functions:
               // Write error to w
           })
 ```
+Each chain is initialized with a basic error handler that
+returns HTTP 500 status with no body.
 
+A chain is an HTTP Handler, so you can use a chain wherever
+an HTTP handler is required. Or, you can simply call
+```
+ c.ServeHTTP(writer,request)
+```
+or use the chain
