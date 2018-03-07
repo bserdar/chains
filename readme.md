@@ -43,4 +43,3 @@ an HTTP handler is required. Or, you can simply call
 ```
  c.ServeHTTP(writer,request)
 ```
-or use the chain
